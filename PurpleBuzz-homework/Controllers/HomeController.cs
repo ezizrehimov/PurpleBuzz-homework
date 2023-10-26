@@ -17,11 +17,21 @@ namespace PurpleBuzz_homework.Controllers
                 new ProjectComponents(4,"Graphic test","Graphic description test",""),
             };
 
+            var projectCategories = new List<ProjectCategories>
+            {
+                new ProjectCategories(1,"Social Media test","Social Media description test",""),
+                new ProjectCategories(2,"Web marketing test","Web marketing description test",""),
+                                new ProjectCategories(3,"R & D test","R & D description test",""),
+                new ProjectCategories(4,"Branding test","Branding description test",""),
+            };
+
+
             var model = new HomeVM()
             {
-                projectComponents = projectComponents
+                projectComponents = projectComponents,
+                projectCategories = projectCategories
             };
-             
+
             return View(model);
         }
     }
