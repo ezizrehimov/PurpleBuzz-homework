@@ -7,6 +7,6 @@ namespace PurpleBuzz_homework.ViewModels.Home
 
         public List<ProjectComponents> projectComponents { get; set; }
 
-        public List<ProjectCategories> projectCategories { get; set; }
+        public List<ProjectRecentWork> projectRecentWorks { get; set; }
     }
 }

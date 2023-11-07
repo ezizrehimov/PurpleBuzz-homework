@@ -20,19 +20,13 @@ namespace PurpleBuzz_homework.Controllers
 
             var projectComponents = await appDbContext.ProjectComponents.ToListAsync();
 
-            var projectCategories = new List<ProjectCategories>
-            {
-                new ProjectCategories(1,"Social Media test","Social Media description test","/assets/img/recent-work-01.jpg"),
-                new ProjectCategories(2,"Web marketing test","Web marketing description test","/assets/img/recent-work-02.jpg"),
-                new ProjectCategories(3,"R & D test","R & D description test","/assets/img/recent-work-03.jpg"),
-                new ProjectCategories(4,"Branding test","Branding description test","/assets/img/recent-work-05.jpg"),
-            };
+            var projectRecentWorks = await appDbContext.projectRecentWorks.ToListAsync();
 
 
             var model = new HomeVM()
             {
                 projectComponents = projectComponents,
-                projectCategories = projectCategories
+                projectRecentWorks = projectRecentWorks
             };
 
             return View(model);

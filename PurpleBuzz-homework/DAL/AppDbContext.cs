@@ -14,6 +14,7 @@ namespace PurpleBuzz_homework.DAL
         public DbSet<ProjectComponents> ProjectComponents { get; set; }
         public DbSet<ProjectWorkCategories> ProjectWorkCategories { get; set; }
         public DbSet<ProjectWorkValues> ProjectWorkValues { get; set; }
+        public DbSet<ProjectRecentWork> projectRecentWorks { get; set; }
 
     }
 }
