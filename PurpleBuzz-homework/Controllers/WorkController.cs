@@ -1,22 +1,39 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PurpleBuzz_homework.DAL;
 using PurpleBuzz_homework.Models;
+using PurpleBuzz_homework.ViewModels.Work;
 
 namespace PurpleBuzz_homework.Controllers
 {
     public class WorkController : Controller
     {
-        public IActionResult Index()
+        private readonly AppDbContext appDbContext;
+
+        public WorkController(AppDbContext appDbContext)
         {
-            var projectWorkValues = new List<ProjectWorkValues>
+            this.appDbContext = appDbContext;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+
+
+            var categories = await appDbContext.ProjectWorkCategories.
+                Include(x => x.WorkValues).
+                ToListAsync();
+
+            var categoriesValues = await appDbContext.ProjectWorkValues.ToListAsync();
+
+
+            var model = new WorkIndexVM
             {
-                new ProjectWorkValues(1,"Digital Marketing test","Digital Marketing description test","/assets/img/our-work-01.jpg"),
-                new ProjectWorkValues(2,"Corporate Branding test","Corporate Branding description test","/assets/img/our-work-02.jpg"),
-                new ProjectWorkValues(3,"Leading Digital Solution test","Leading Digital Solution description test","/assets/img/our-work-03.jpg"),
-                new ProjectWorkValues(4,"Smart Applications test","Smart Applications description test","/assets/img/our-work-04.jpg"),
-                new ProjectWorkValues(5,"8 Financial Tips test","8 Financial Tips description test","/assets/img/our-work-06.jpg"),
+                ProjectWorkCategories = categories,
+                ProjectWorkValues = categoriesValues
             };
 
-            return View(projectWorkValues);
+
+            return View(model);
         }
     }
 }

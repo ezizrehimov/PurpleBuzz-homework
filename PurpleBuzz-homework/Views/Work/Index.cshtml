@@ -1,5 +1,5 @@
-﻿@using PurpleBuzz_homework.Models;
-@model List<ProjectWorkValues>
+﻿@using PurpleBuzz_homework.ViewModels.Work;
+@model WorkIndexVM
 
 <!-- Start Banner Hero -->
 <div id="work_banner" class="banner-wrapper bg-light w-100 py-5">
@@ -24,37 +24,55 @@
 <section class="container py-5">
     <div class="row justify-content-center my-5">
         <div class="filter-btns shadow-md rounded-pill text-center col-auto">
-            <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4 active" data-filter=".project" href="#">All</a>
-            <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4" data-filter=".business" href="#">Business</a>
-            <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4" data-filter=".marketing" href="#">Marketing</a>
-            <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4" data-filter=".social" href="#">Social Media</a>
-            <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4" data-filter=".graphic" href="#">Graphic</a>
+
+            @{
+                bool isFirst = true;
+            }
+
+            @foreach (var item in Model.ProjectWorkCategories)
+            {
+                if (isFirst)
+                {
+                    <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4 active" data-filter=".project" href="#">@item.Title</a>
+
+                }
+                else
+                {
+                    <a class="filter-btn btn rounded-pill btn-outline-primary border-0 m-md-2 px-md-4" data-filter=".@item.Title.ToLower()" href="#">@item.Title</a>
+
+                }
+                isFirst = false;
+            }
         </div>
     </div>
 
     <div class="row projects gx-lg-5">
 
-        @foreach (var item in Model)
+        @foreach (var categories in Model.ProjectWorkCategories)
         {
-            <a href="work-single.html" class="col-sm-6 col-lg-4 text-decoration-none project marketing social business">
-                <div class="service-work overflow-hidden card mb-5 mx-5 m-sm-0">
-                    <img class="card-img-top" src="@item.ImagePath" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title light-300 text-dark">@item.Title</h5>
-                        <p class="card-text light-300 text-dark">
-                          @item.Description
-                        </p>
-                        <span class="text-decoration-none text-primary light-300">
-                            Read more <i class='bx bxs-hand-right ms-1'></i>
-                        </span>
+
+            @foreach (var values in categories.WorkValues)
+            {
+                <a href="work-single.html" class="col-sm-6 col-lg-4 text-decoration-none project @categories.Title.Replace(" ","-").ToLower()">
+                    <div class="service-work overflow-hidden card mb-5 mx-5 m-sm-0">
+                        <img class="card-img-top" src="@values.ImagePath" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title light-300 text-dark">@values.Title</h5>
+                            <p class="card-text light-300 text-dark">
+                                @values.Description
+                            </p>
+                            <span class="text-decoration-none text-primary light-300">
+                                Read more <i class='bx bxs-hand-right ms-1'></i>
+                            </span>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+
+            }
 
         }
 
 
-    
     </div>
     <div class="row">
         <div class="btn-toolbar justify-content-center pb-4" role="toolbar" aria-label="Toolbar with button groups">

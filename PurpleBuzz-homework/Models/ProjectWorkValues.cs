@@ -7,6 +7,8 @@
         public string Description { get; set; }
         public string ImagePath { get; set; }
 
+        public List<ProjectWorkCategories> WorkCategories { get; set; }
+
         public ProjectWorkValues(int id, string title, string description, string imagePath)
         {
             Id = id;
