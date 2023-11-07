@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PurpleBuzz_homework.DAL;
 using PurpleBuzz_homework.Models;
 using PurpleBuzz_homework.ViewModels.Home;
 
@@ -6,16 +8,17 @@ namespace PurpleBuzz_homework.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly AppDbContext appDbContext;
+
+        public HomeController(AppDbContext appDbContext)
+        {
+            this.appDbContext = appDbContext;
+        }
+
+        public async Task<IActionResult> Index()
         {
 
-            var projectComponents = new List<ProjectComponents>
-            {
-                new ProjectComponents(1,"UI/UX test","UI/UX description test","/assets/img/services-01.jpg"),
-                new ProjectComponents(2,"Social Media test","Social Media description test","/assets/img/services-02.jpg"),
-                new ProjectComponents(3,"Marketing test","Marketing description test","/assets/img/services-03.jpg"),
-                new ProjectComponents(4,"Graphic test","Graphic description test","/assets/img/services-04.jpg"),
-            };
+            var projectComponents = await appDbContext.ProjectComponents.ToListAsync();
 
             var projectCategories = new List<ProjectCategories>
             {
