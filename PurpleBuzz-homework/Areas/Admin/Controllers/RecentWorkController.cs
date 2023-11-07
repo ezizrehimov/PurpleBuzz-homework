@@ -44,9 +44,71 @@ namespace PurpleBuzz_homework.Areas.Admin.Controllers
                 return View(projectRecentWork);
             }
             await appDbContext.projectRecentWorks.AddAsync(projectRecentWork);
-            await appDbContext.SaveChangesAsync();  
+            await appDbContext.SaveChangesAsync();
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Update(int id)
+        {
+            var dbRecentComp = await appDbContext.projectRecentWorks.FindAsync(id);
+            if (dbRecentComp == null) return NotFound();
+
+            return View(dbRecentComp);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(int id, ProjectRecentWork projectRecentWork)
+        {
+            if (!ModelState.IsValid) return View(projectRecentWork);
+
+            if (id != projectRecentWork.Id) return BadRequest();
+
+            var dbRecentWork = await appDbContext.projectRecentWorks.FindAsync(id);
+            if (dbRecentWork == null) return NotFound();
+
+
+            bool isExist = await appDbContext.projectRecentWorks
+              .AnyAsync(rc => rc.Title.ToLower().Trim() == projectRecentWork.Title.ToLower().Trim() && rc.Id != projectRecentWork.Id);
+
+            if (isExist)
+            {
+                ModelState.AddModelError("Title", "Bu adda work movuddur");
+                return View(projectRecentWork);
+            };
+
+            dbRecentWork.Title = projectRecentWork.Title;
+            dbRecentWork.Description = projectRecentWork.Description;
+            dbRecentWork.ImagePath = projectRecentWork.ImagePath;
+
+            await appDbContext.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var dbRecentComp = await appDbContext.projectRecentWorks.FindAsync(id);
+            if (dbRecentComp == null) return NotFound();
+
+            return View(dbRecentComp);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteWork(int id)
+        {
+            var dbRecentComp = await appDbContext.projectRecentWorks.FindAsync(id);
+            if (dbRecentComp == null) return NotFound();
+
+            appDbContext.projectRecentWorks.Remove(dbRecentComp);
+            await appDbContext.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
