@@ -29,7 +29,7 @@
                 bool isFirst = true;
             }
 
-@*             @foreach (var item in Model.ProjectWorkCategories)
+            @foreach (var item in Model.WorkCategories)
             {
                 if (isFirst)
                 {
@@ -43,23 +43,24 @@
                 }
                 isFirst = false;
             }
- *@        </div>
+
+        </div>
     </div>
 
     <div class="row projects gx-lg-5">
 
-@*         @foreach (var categories in Model.ProjectWorkCategories)
+        @foreach (var categories in Model.WorkCategories)
         {
 
-            @foreach (var values in categories.WorkValues)
+            @foreach (var values in categories.CategoryValues)
             {
                 <a href="work-single.html" class="col-sm-6 col-lg-4 text-decoration-none project @categories.Title.Replace(" ","-").ToLower()">
                     <div class="service-work overflow-hidden card mb-5 mx-5 m-sm-0">
-                        <img class="card-img-top" src="@values.ImagePath" alt="...">
+                        <img class="card-img-top" src="@values.workValues.ImagePath" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title light-300 text-dark">@values.Title</h5>
+                            <h5 class="card-title light-300 text-dark">@values.workValues.Title</h5>
                             <p class="card-text light-300 text-dark">
-                                @values.Description
+                                @values.workValues.Description
                             </p>
                             <span class="text-decoration-none text-primary light-300">
                                 Read more <i class='bx bxs-hand-right ms-1'></i>
@@ -71,7 +72,7 @@
             }
 
         }
- *@
+
 
     </div>
     <div class="row">

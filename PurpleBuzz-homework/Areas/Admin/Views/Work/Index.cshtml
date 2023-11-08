@@ -1,0 +1,38 @@
+﻿@using PurpleBuzz_homework.Models;
+@model List<WorkValues>
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <a class="btn btn-primary col-2" asp-action="create" asp-controller="work" asp-area="admin">Create Work Values</a>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Desc</th>
+                        <th scope="col">ImagePath</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.Id</th>
+                            <td>@item.Title</td>
+                            <td>@item.Description</td>
+                            <td>@item.ImagePath</td>
+                            <td>
+                                <a class="btn btn-primary" asp-action="update" asp-controller="work" asp-area="admin" asp-route-id="@item.Id">Update</a>
+                                <a class="btn btn-danger" asp-action="delete" asp-controller="work" asp-area="admin" asp-route-id="@item.Id">Delete</a>
+
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

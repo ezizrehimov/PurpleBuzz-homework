@@ -11,7 +11,7 @@ using PurpleBuzz_homework.DAL;
 namespace PurpleBuzz_homework.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231108083235_nameChanges")]
+    [Migration("20231108084345_nameChanges")]
     partial class nameChanges
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -97,12 +97,6 @@ namespace PurpleBuzz_homework.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ValuesId")
-                        .HasColumnType("int");
 
                     b.Property<int>("workCategoriesId")
                         .HasColumnType("int");
