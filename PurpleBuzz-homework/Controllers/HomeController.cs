@@ -20,7 +20,7 @@ namespace PurpleBuzz_homework.Controllers
 
             var projectComponents = await appDbContext.ProjectComponents.ToListAsync();
 
-            var projectRecentWorks = await appDbContext.projectRecentWorks.ToListAsync();
+            var projectRecentWorks = await appDbContext.RecentWorks.ToListAsync();
 
 
             var model = new HomeVM()

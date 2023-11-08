@@ -2,7 +2,7 @@
 
 namespace PurpleBuzz_homework.Models
 {
-    public class ProjectRecentWork
+    public class RecentWork
     {
         public int Id { get; set; }
         [Required(ErrorMessage="Title yazilmalidir."),MinLength(3,ErrorMessage ="Minimum uzunluq 3 olmalidir.")]

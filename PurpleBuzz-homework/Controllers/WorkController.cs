@@ -19,21 +19,21 @@ namespace PurpleBuzz_homework.Controllers
         {
 
 
-            var categories = await appDbContext.ProjectWorkCategories.
-                Include(x => x.WorkValues).
-                ToListAsync();
+            //var categories = await appDbContext.ProjectWorkCategories.
+            //    Include(x => x.WorkValues).
+            //    ToListAsync();
 
-            var categoriesValues = await appDbContext.ProjectWorkValues.ToListAsync();
-
-
-            var model = new WorkIndexVM
-            {
-                ProjectWorkCategories = categories,
-                ProjectWorkValues = categoriesValues
-            };
+            //var categoriesValues = await appDbContext.ProjectWorkValues.ToListAsync();
 
 
-            return View(model);
+            //var model = new WorkIndexVM
+            //{
+            //    ProjectWorkCategories = categories,
+            //    ProjectWorkValues = categoriesValues
+            //};
+
+            // model
+            return View();
         }
     }
 }

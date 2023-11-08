@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PurpleBuzz_homework.DAL;
 
@@ -10,9 +11,10 @@ using PurpleBuzz_homework.DAL;
 namespace PurpleBuzz_homework.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231108082417_CategoryValuesAdded")]
+    partial class CategoryValuesAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,7 +48,7 @@ namespace PurpleBuzz_homework.Migrations
                     b.ToTable("ProjectComponents");
                 });
 
-            modelBuilder.Entity("PurpleBuzz_homework.Models.RecentWork", b =>
+            modelBuilder.Entity("PurpleBuzz_homework.Models.ProjectRecentWork", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -68,10 +70,10 @@ namespace PurpleBuzz_homework.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RecentWorks");
+                    b.ToTable("projectRecentWorks");
                 });
 
-            modelBuilder.Entity("PurpleBuzz_homework.Models.WorkCategories", b =>
+            modelBuilder.Entity("PurpleBuzz_homework.Models.ProjectWorkCategories", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -85,10 +87,10 @@ namespace PurpleBuzz_homework.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("WorkCategories");
+                    b.ToTable("ProjectWorkCategories");
                 });
 
-            modelBuilder.Entity("PurpleBuzz_homework.Models.WorkCategoryValues", b =>
+            modelBuilder.Entity("PurpleBuzz_homework.Models.ProjectWorkCategoryValues", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -117,7 +119,7 @@ namespace PurpleBuzz_homework.Migrations
                     b.ToTable("CategoryValues");
                 });
 
-            modelBuilder.Entity("PurpleBuzz_homework.Models.WorkValues", b =>
+            modelBuilder.Entity("PurpleBuzz_homework.Models.ProjectWorkValues", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -139,18 +141,18 @@ namespace PurpleBuzz_homework.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("WorkValues");
+                    b.ToTable("ProjectWorkValues");
                 });
 
-            modelBuilder.Entity("PurpleBuzz_homework.Models.WorkCategoryValues", b =>
+            modelBuilder.Entity("PurpleBuzz_homework.Models.ProjectWorkCategoryValues", b =>
                 {
-                    b.HasOne("PurpleBuzz_homework.Models.WorkCategories", "workCategories")
+                    b.HasOne("PurpleBuzz_homework.Models.ProjectWorkCategories", "workCategories")
                         .WithMany("CategoryValues")
                         .HasForeignKey("workCategoriesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PurpleBuzz_homework.Models.WorkValues", "workValues")
+                    b.HasOne("PurpleBuzz_homework.Models.ProjectWorkValues", "workValues")
                         .WithMany("CategoryValues")
                         .HasForeignKey("workValuesId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -161,12 +163,12 @@ namespace PurpleBuzz_homework.Migrations
                     b.Navigation("workValues");
                 });
 
-            modelBuilder.Entity("PurpleBuzz_homework.Models.WorkCategories", b =>
+            modelBuilder.Entity("PurpleBuzz_homework.Models.ProjectWorkCategories", b =>
                 {
                     b.Navigation("CategoryValues");
                 });
 
-            modelBuilder.Entity("PurpleBuzz_homework.Models.WorkValues", b =>
+            modelBuilder.Entity("PurpleBuzz_homework.Models.ProjectWorkValues", b =>
                 {
                     b.Navigation("CategoryValues");
                 });

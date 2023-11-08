@@ -29,7 +29,7 @@
                 bool isFirst = true;
             }
 
-            @foreach (var item in Model.ProjectWorkCategories)
+@*             @foreach (var item in Model.ProjectWorkCategories)
             {
                 if (isFirst)
                 {
@@ -43,12 +43,12 @@
                 }
                 isFirst = false;
             }
-        </div>
+ *@        </div>
     </div>
 
     <div class="row projects gx-lg-5">
 
-        @foreach (var categories in Model.ProjectWorkCategories)
+@*         @foreach (var categories in Model.ProjectWorkCategories)
         {
 
             @foreach (var values in categories.WorkValues)
@@ -71,7 +71,7 @@
             }
 
         }
-
+ *@
 
     </div>
     <div class="row">

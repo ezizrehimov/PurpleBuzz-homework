@@ -4,8 +4,8 @@ namespace PurpleBuzz_homework.ViewModels.Work
 {
     public class WorkIndexVM
     {
-        public List<ProjectWorkCategories> ProjectWorkCategories { get; set; }
+        public List<WorkCategories> ProjectWorkCategories { get; set; }
 
-        public List<ProjectWorkValues> ProjectWorkValues { get; set; }
+        public List<WorkValues> ProjectWorkValues { get; set; }
     }
 }
