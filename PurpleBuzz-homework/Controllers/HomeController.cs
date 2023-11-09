@@ -18,18 +18,35 @@ namespace PurpleBuzz_homework.Controllers
         public async Task<IActionResult> Index()
         {
 
-            var projectComponents = await appDbContext.ProjectComponents.ToListAsync();
+            var services = await appDbContext.Services.ToListAsync();
 
-            var projectRecentWorks = await appDbContext.RecentWorks.ToListAsync();
+            var recentWorks = await appDbContext.RecentWorks.OrderByDescending(rw => rw.Id)
+                .Skip(3)
+                .Take(3)
+                .ToListAsync();
+
 
 
             var model = new HomeVM()
             {
-                projectComponents = projectComponents,
-                projectRecentWorks = projectRecentWorks
+                Services = services,
+                RecentWork = recentWorks
             };
 
             return View(model);
         }
+
+
+        public async Task<IActionResult> loadmore(int skipRow)
+        {
+            var recentWorks = await appDbContext.RecentWorks.OrderByDescending(rw => rw.Id)
+                .Skip(3 * skipRow)
+                .Take(3)
+                .ToListAsync();
+
+            return PartialView("_RecentWorkPartialView", recentWorks);
+        }
+
+
     }
 }

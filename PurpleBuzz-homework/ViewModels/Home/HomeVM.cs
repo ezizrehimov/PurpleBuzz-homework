@@ -5,8 +5,8 @@ namespace PurpleBuzz_homework.ViewModels.Home
     public class HomeVM
     {
 
-        public List<ProjectComponents> projectComponents { get; set; }
+        public List<Services> Services { get; set; }
 
-        public List<RecentWork> projectRecentWorks { get; set; }
+        public List<RecentWork> RecentWork { get; set; }
     }
 }
