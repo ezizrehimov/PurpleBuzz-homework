@@ -44,6 +44,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0ZVBhcnRpYWxWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Ezizchik/source/repos/PurpleBuzz-homework/PurpleBuzz-homework/Areas/Admin/Views/TeamMembers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbU1lbWJlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ezizchik/source/repos/PurpleBuzz-homework/PurpleBuzz-homework/Areas/Admin/Views/TeamMembers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhbU1lbWJlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Ezizchik/source/repos/PurpleBuzz-homework/PurpleBuzz-homework/Areas/Admin/Views/Work/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV29ya1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
