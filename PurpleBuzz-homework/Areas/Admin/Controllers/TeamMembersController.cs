@@ -29,6 +29,7 @@ namespace PurpleBuzz_homework.Areas.Admin.Controllers
             return View();
 
         }
+
         [HttpPost]
         public async Task<IActionResult> Create(TeamMembers teamMember)
         {
@@ -60,5 +61,30 @@ namespace PurpleBuzz_homework.Areas.Admin.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var model = await appDbContext.TeamMembers.FindAsync(id);
+            if (model == null) return NotFound();
+
+            return View(model);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteComponent(int id)
+        {
+            var model = await appDbContext.TeamMembers.FindAsync(id);
+            if(model == null) return NotFound();
+
+            var path = Path.Combine(webHostEnvironment.WebRootPath, "assets", "img", model.PhotoName);
+            if(System.IO.File.Exists(path)) System.IO.File.Delete(path);
+            appDbContext.TeamMembers.Remove(model);
+            await appDbContext.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
+
     }
 }
