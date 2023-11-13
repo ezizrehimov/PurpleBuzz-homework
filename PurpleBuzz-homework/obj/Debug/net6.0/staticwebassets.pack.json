@@ -397,8 +397,8 @@
       "PackagePath": "staticwebassets\\assets\\fonts\\boxicons.woff2"
     },
     {
-      "Id": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\9fe9518a-df9d-4e52-9a2d-c8a098a5128b_Photo",
-      "PackagePath": "staticwebassets\\assets\\img"
+      "Id": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\9fe9518a-df9d-4e52-9a2d-c8a098a5128b_Photo.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\9fe9518a-df9d-4e52-9a2d-c8a098a5128b_Photo.jpg"
     },
     {
       "Id": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\System.Func`1[System.Guid]_Photo",
@@ -407,6 +407,10 @@
     {
       "Id": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\apple-icon.png",
       "PackagePath": "staticwebassets\\assets\\img\\apple-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\b7babac9-b8c0-4019-b9c3-bd36b4c2ba95_Photo.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\b7babac9-b8c0-4019-b9c3-bd36b4c2ba95_Photo.jpg"
     },
     {
       "Id": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\banner-bg-01.jpg",
@@ -427,6 +431,14 @@
     {
       "Id": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\banner-img-02.svg",
       "PackagePath": "staticwebassets\\assets\\img\\banner-img-02.svg"
+    },
+    {
+      "Id": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\bfd4be5f-9ae7-4aa8-b640-2b992cc82009_Photo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\bfd4be5f-9ae7-4aa8-b640-2b992cc82009_Photo.png"
+    },
+    {
+      "Id": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\d784453d-16b3-405a-91a5-1d4944a298ec_Photo",
+      "PackagePath": "staticwebassets\\assets\\img"
     },
     {
       "Id": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\favicon.ico",

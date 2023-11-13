@@ -47,7 +47,7 @@ namespace PurpleBuzz_homework.Areas.Admin.Controllers
                 return View(teamMember);
             }
 
-            var fileName = $"{Guid.NewGuid()}_{teamMember.Photo.Name}";
+            var fileName = $"{Guid.NewGuid()}_{teamMember.Photo.FileName}";
             var path = Path.Combine(webHostEnvironment.WebRootPath, "assets", "img", fileName);
 
             using (FileStream fileSteam = new FileStream(path, FileMode.Create, FileAccess.ReadWrite))
