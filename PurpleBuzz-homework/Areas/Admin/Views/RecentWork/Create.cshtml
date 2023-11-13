@@ -39,5 +39,7 @@
 </div>
 
 @section Scripts{
-    @Html.RenderPartialAsync("_ValidatePartialView")
+    @{
+        await Html.RenderPartialAsync("_ValidatePartialView");
+    }
 }

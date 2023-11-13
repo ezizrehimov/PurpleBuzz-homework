@@ -51,7 +51,7 @@
 
         @foreach (var categories in Model.WorkCategories)
         {
-
+          
             @foreach (var values in categories.CategoryValues)
             {
                 <a href="work-single.html" class="col-sm-6 col-lg-4 text-decoration-none project @categories.Title.Replace(" ","-").ToLower()">
