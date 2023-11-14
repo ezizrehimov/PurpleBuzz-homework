@@ -5,7 +5,7 @@ namespace PurpleBuzz_homework.Helpers
 {
     public class FileService : IFileService
     {
-        public async Task<string> UploadSync(string webRootPath, IFormFile file)
+        public async Task<string> UploadAsync(string webRootPath, IFormFile file)
         {
             var fileName = $"{Guid.NewGuid()}_{file.FileName}";
             var path = Path.Combine(webRootPath, "assets", "img", fileName);

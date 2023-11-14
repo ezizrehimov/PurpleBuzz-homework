@@ -2,7 +2,7 @@
 {
     public interface IFileService
     {
-        Task<string> UploadSync(string webRootPath,IFormFile file);
+        Task<string> UploadAsync(string webRootPath,IFormFile file);
 
         void Delete(string webRootPath, string fileName );
 
