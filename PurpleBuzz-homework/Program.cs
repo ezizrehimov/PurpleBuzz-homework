@@ -1,8 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using PurpleBuzz_homework.DAL;
+using PurpleBuzz_homework.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<IFileService, FileService>();
 
 var connectionSting = builder.Configuration.GetConnectionString("ConString");
 
@@ -13,7 +15,7 @@ app.UseStaticFiles();
 
 app.MapControllerRoute(
     name: "admin",
-    pattern: "{area=exists}/{controller=dashboard}/{action=index}/{id?}"
+    pattern: "{area}/{controller=dashboard}/{action=index}/{id?}"
     );
 
 app.MapControllerRoute(

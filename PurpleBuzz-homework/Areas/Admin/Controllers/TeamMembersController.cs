@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PurpleBuzz_homework.DAL;
+using PurpleBuzz_homework.Helpers;
 using PurpleBuzz_homework.Models;
 
 namespace PurpleBuzz_homework.Areas.Admin.Controllers
@@ -11,11 +12,13 @@ namespace PurpleBuzz_homework.Areas.Admin.Controllers
     {
         private readonly AppDbContext appDbContext;
         private readonly IWebHostEnvironment webHostEnvironment;
+        private readonly IFileService fileService;
 
-        public TeamMembersController(AppDbContext appDbContext, IWebHostEnvironment webHostEnvironment)
+        public TeamMembersController(AppDbContext appDbContext, IWebHostEnvironment webHostEnvironment, IFileService fileService)
         {
             this.appDbContext = appDbContext;
             this.webHostEnvironment = webHostEnvironment;
+            this.fileService = fileService;
         }
         public async Task<IActionResult> Index()
         {
@@ -36,26 +39,20 @@ namespace PurpleBuzz_homework.Areas.Admin.Controllers
 
             if (!ModelState.IsValid) return View(teamMember);
 
-            if (!teamMember.Photo.ContentType.Contains("image/"))
+            if (!fileService.IsImage(teamMember.Photo))
             {
                 ModelState.AddModelError("Photo", "Yuklenen fayl sekil formatinda olmalidir");
                 return View(teamMember);
             }
 
-            if (teamMember.Photo.Length / 1024 > 300)
+            if (!fileService.SizeCheck(teamMember.Photo))
             {
                 ModelState.AddModelError("Photo", "Yuklenen sekilin hecmi boyukdur");
                 return View(teamMember);
             }
 
-            var fileName = $"{Guid.NewGuid()}_{teamMember.Photo.FileName}";
-            var path = Path.Combine(webHostEnvironment.WebRootPath, "assets", "img", fileName);
 
-            using (FileStream fileSteam = new FileStream(path, FileMode.Create, FileAccess.ReadWrite))
-            {
-                await teamMember.Photo.CopyToAsync(fileSteam);
-            }
-            teamMember.PhotoName = fileName;
+            teamMember.PhotoName = await fileService.UploadSync(webHostEnvironment.WebRootPath, teamMember.Photo);
             await appDbContext.AddAsync(teamMember);
             await appDbContext.SaveChangesAsync();
 
@@ -76,10 +73,9 @@ namespace PurpleBuzz_homework.Areas.Admin.Controllers
         public async Task<IActionResult> DeleteComponent(int id)
         {
             var model = await appDbContext.TeamMembers.FindAsync(id);
-            if(model == null) return NotFound();
+            if (model == null) return NotFound();
 
-            var path = Path.Combine(webHostEnvironment.WebRootPath, "assets", "img", model.PhotoName);
-            if(System.IO.File.Exists(path)) System.IO.File.Delete(path);
+             fileService.Delete(webHostEnvironment.WebRootPath, model.PhotoName);
             appDbContext.TeamMembers.Remove(model);
             await appDbContext.SaveChangesAsync();
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "T3Sncx1Bzrh6pu4Y1GCs+dUDk/oyLlOA596pPkmuR2M=",
+  "Hash": "LmjkMCJJUIfQgLI//drVqrQmFlN6Tbvim9yeYWPmWoY=",
   "Source": "PurpleBuzz-homework",
   "BasePath": "_content/PurpleBuzz-homework",
   "Mode": "Default",
@@ -1700,12 +1700,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\boxicons.woff2"
     },
     {
-      "Identity": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\8ecea07d-b9b4-4d6a-b2be-74c8cd6da2a0_2317867467_1088502907.jpg",
+      "Identity": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\23b38b71-d97a-4637-938a-5d599890f792_2317867467_1088502907.jpg",
       "SourceId": "PurpleBuzz-homework",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\",
       "BasePath": "_content/PurpleBuzz-homework",
-      "RelativePath": "assets/img/8ecea07d-b9b4-4d6a-b2be-74c8cd6da2a0_2317867467_1088502907.jpg",
+      "RelativePath": "assets/img/23b38b71-d97a-4637-938a-5d599890f792_2317867467_1088502907.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1714,7 +1714,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\8ecea07d-b9b4-4d6a-b2be-74c8cd6da2a0_2317867467_1088502907.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\23b38b71-d97a-4637-938a-5d599890f792_2317867467_1088502907.jpg"
     },
     {
       "Identity": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\9fe9518a-df9d-4e52-9a2d-c8a098a5128b_Photo.jpg",
@@ -1868,23 +1868,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\bfd4be5f-9ae7-4aa8-b640-2b992cc82009_Photo.png"
-    },
-    {
-      "Identity": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\d784453d-16b3-405a-91a5-1d4944a298ec_Photo",
-      "SourceId": "PurpleBuzz-homework",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\",
-      "BasePath": "_content/PurpleBuzz-homework",
-      "RelativePath": "assets/img/d784453d-16b3-405a-91a5-1d4944a298ec_Photo",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\d784453d-16b3-405a-91a5-1d4944a298ec_Photo"
     },
     {
       "Identity": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\favicon.ico",
@@ -2446,23 +2429,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\services-08.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\System.Func`1[System.Guid]_Photo",
-      "SourceId": "PurpleBuzz-homework",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\",
-      "BasePath": "_content/PurpleBuzz-homework",
-      "RelativePath": "assets/img/System.Func`1[System.Guid]_Photo",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\System.Func`1[System.Guid]_Photo"
     },
     {
       "Identity": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\team-01.jpg",
