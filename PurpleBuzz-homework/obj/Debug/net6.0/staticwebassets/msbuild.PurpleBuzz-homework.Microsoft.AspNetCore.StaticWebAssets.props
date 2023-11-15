@@ -1584,12 +1584,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\fonts\boxicons.woff2))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\23b38b71-d97a-4637-938a-5d599890f792_2317867467_1088502907.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\22b88f6c-3d6f-4a6a-b65c-682e1d872388_product-image-1139520651.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PurpleBuzz-homework</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/PurpleBuzz-homework</BasePath>
-      <RelativePath>assets/img/23b38b71-d97a-4637-938a-5d599890f792_2317867467_1088502907.jpg</RelativePath>
+      <RelativePath>assets/img/22b88f6c-3d6f-4a6a-b65c-682e1d872388_product-image-1139520651.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1598,7 +1598,39 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\23b38b71-d97a-4637-938a-5d599890f792_2317867467_1088502907.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\22b88f6c-3d6f-4a6a-b65c-682e1d872388_product-image-1139520651.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\43548089-ecc6-4f52-90cc-a0c14c947253_product-image-1139520651.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>PurpleBuzz-homework</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PurpleBuzz-homework</BasePath>
+      <RelativePath>assets/img/43548089-ecc6-4f52-90cc-a0c14c947253_product-image-1139520651.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\43548089-ecc6-4f52-90cc-a0c14c947253_product-image-1139520651.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\5a05ee66-2db7-4edc-b889-466cd5b8e238_2317867467_1088502907.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>PurpleBuzz-homework</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PurpleBuzz-homework</BasePath>
+      <RelativePath>assets/img/5a05ee66-2db7-4edc-b889-466cd5b8e238_2317867467_1088502907.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\5a05ee66-2db7-4edc-b889-466cd5b8e238_2317867467_1088502907.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\9fe9518a-df9d-4e52-9a2d-c8a098a5128b_Photo.jpg))">
       <SourceType>Package</SourceType>

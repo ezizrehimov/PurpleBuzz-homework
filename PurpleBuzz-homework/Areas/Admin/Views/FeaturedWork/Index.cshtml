@@ -1,0 +1,45 @@
+﻿@using PurpleBuzz_homework.Models;
+@model FeaturedWork
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            @{
+                if (Model == null)
+                {
+                    <a class="btn btn-primary col-2" asp-action="create" asp-controller="featuredwork" asp-area="admin">Create Featured Work</a>
+
+                }
+                else
+                {
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <th scope="row">@Model.Id</th>
+                                <td>@Model.Name</td>
+                                <td>@Model.Title</td>
+                                <td>
+                                    <a class="btn btn-primary" asp-action="update" asp-controller="featuredwork" asp-area="admin" asp-route-id="@Model.Id">Update</a>
+                                    <a class="btn btn-danger" asp-action="delete" asp-controller="featuredwork" asp-area="admin" asp-route-id="@Model.Id">Delete</a>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                }
+            }
+        </div>
+    </div>
+</div>

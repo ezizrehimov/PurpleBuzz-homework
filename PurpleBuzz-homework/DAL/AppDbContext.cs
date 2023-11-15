@@ -19,5 +19,7 @@ namespace PurpleBuzz_homework.DAL
         public DbSet<ObjectiveComponent> ObjectiveComponents { get; set; }
 
         public DbSet<TeamMembers> TeamMembers { get; set; }
+        public DbSet<FeaturedWork> FeaturedWorks { get; set; }
+        public DbSet<FeaturedWorkPhoto> FeaturedWorkPhotos { get; set; }
     }
 }
