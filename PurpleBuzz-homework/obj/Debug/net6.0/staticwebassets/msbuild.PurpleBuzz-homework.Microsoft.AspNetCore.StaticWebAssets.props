@@ -1584,6 +1584,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\fonts\boxicons.woff2))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\01b1e0c9-7ad7-449c-8db1-6e1aed83cec6_s-l1600.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>PurpleBuzz-homework</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PurpleBuzz-homework</BasePath>
+      <RelativePath>assets/img/01b1e0c9-7ad7-449c-8db1-6e1aed83cec6_s-l1600.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\01b1e0c9-7ad7-449c-8db1-6e1aed83cec6_s-l1600.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\22b88f6c-3d6f-4a6a-b65c-682e1d872388_product-image-1139520651.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PurpleBuzz-homework</SourceId>
@@ -1631,6 +1647,38 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\5a05ee66-2db7-4edc-b889-466cd5b8e238_2317867467_1088502907.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\6f51a779-4322-4443-b336-7ca9b8e9449c_price-2.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>PurpleBuzz-homework</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PurpleBuzz-homework</BasePath>
+      <RelativePath>assets/img/6f51a779-4322-4443-b336-7ca9b8e9449c_price-2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\6f51a779-4322-4443-b336-7ca9b8e9449c_price-2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\9349e67d-c711-44f6-9887-8d0793e361e6_gothic-punk-rock-men-s-metal-fire-breathing-dragon-curb-chain-bracelets-rebelsmarket (3).webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>PurpleBuzz-homework</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PurpleBuzz-homework</BasePath>
+      <RelativePath>assets/img/9349e67d-c711-44f6-9887-8d0793e361e6_gothic-punk-rock-men-s-metal-fire-breathing-dragon-curb-chain-bracelets-rebelsmarket (3).webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\9349e67d-c711-44f6-9887-8d0793e361e6_gothic-punk-rock-men-s-metal-fire-breathing-dragon-curb-chain-bracelets-rebelsmarket (3).webp))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\9fe9518a-df9d-4e52-9a2d-c8a098a5128b_Photo.jpg))">
       <SourceType>Package</SourceType>
@@ -1760,6 +1808,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\banner-img-02.svg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\be081112-fae1-4dde-99d5-86c2f943fd79_2317867467_1088502907.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>PurpleBuzz-homework</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PurpleBuzz-homework</BasePath>
+      <RelativePath>assets/img/be081112-fae1-4dde-99d5-86c2f943fd79_2317867467_1088502907.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\be081112-fae1-4dde-99d5-86c2f943fd79_2317867467_1088502907.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\bfd4be5f-9ae7-4aa8-b640-2b992cc82009_Photo.png))">
       <SourceType>Package</SourceType>
       <SourceId>PurpleBuzz-homework</SourceId>
@@ -1775,6 +1839,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\bfd4be5f-9ae7-4aa8-b640-2b992cc82009_Photo.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\c1968af1-48e3-42ef-9e71-5d79db57adcc_gothic-punk-rock-men-s-metal-fire-breathing-dragon-curb-chain-bracelets-rebelsmarket.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>PurpleBuzz-homework</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PurpleBuzz-homework</BasePath>
+      <RelativePath>assets/img/c1968af1-48e3-42ef-9e71-5d79db57adcc_gothic-punk-rock-men-s-metal-fire-breathing-dragon-curb-chain-bracelets-rebelsmarket.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\c1968af1-48e3-42ef-9e71-5d79db57adcc_gothic-punk-rock-men-s-metal-fire-breathing-dragon-curb-chain-bracelets-rebelsmarket.webp))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\favicon.ico))">
       <SourceType>Package</SourceType>

@@ -70,7 +70,7 @@ namespace PurpleBuzz_homework.Areas.Admin.Controllers
                 }
             }
             if (hasError) return View(model);
-    
+
             await appDbContext.FeaturedWorks.AddAsync(featuredWork);
             await appDbContext.SaveChangesAsync();
 
@@ -87,6 +87,72 @@ namespace PurpleBuzz_homework.Areas.Admin.Controllers
 
             }
 
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> Update()
+        {
+            var dbModel = await appDbContext.FeaturedWorks.Include(fw => fw.FeaturedWorkPhotos).FirstOrDefaultAsync();
+            if (dbModel == null) return NotFound();
+
+            var model = new FeaturedWorkUpdateViewModel
+            {
+                Title = dbModel.Title,
+                Name = dbModel.Name,
+                Description = dbModel.Description,
+                FeaturedWorkPhotos = dbModel.FeaturedWorkPhotos.OrderByDescending(fwp => fwp.Id).ToList(),
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(FeaturedWorkUpdateViewModel model)
+        {
+            model.FeaturedWorkPhotos = await appDbContext.FeaturedWorkPhotos.ToListAsync();
+
+            if (!ModelState.IsValid) return View(model);
+
+            var dbModel = await appDbContext.FeaturedWorks.FirstOrDefaultAsync();
+            if (dbModel == null) return NotFound();
+
+            dbModel.Title = model.Title;
+            dbModel.Description = model.Description;
+            dbModel.Name = model.Name;
+
+            if (model.Photos != null)
+            {
+                bool hasError = false;
+                foreach (var item in model.Photos)
+                {
+                    if (!fileService.IsImage(item))
+                    {
+                        ModelState.AddModelError("Photos", $"{item.FileName} adli fayl sekil deyil");
+                        hasError = true;
+                    }
+                    else
+                    {
+                        if (!fileService.SizeCheck(item))
+                        {
+                            ModelState.AddModelError("Photos", $"{item.FileName} adli faylin hecmi boyukdur ");
+                            hasError = true;
+                        }
+                    }
+                }
+                if (hasError) return View(model);
+
+                foreach (var item in model.Photos)
+                {
+                    var featuredPhoto = new FeaturedWorkPhoto();
+                    featuredPhoto.Name = await fileService.UploadAsync(webHostEnvironment.WebRootPath, item);
+                    featuredPhoto.FeaturedWorkId = dbModel.Id;
+                    await appDbContext.FeaturedWorkPhotos.AddAsync(featuredPhoto);
+                    await appDbContext.SaveChangesAsync();
+                }
+            }
+            await appDbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
