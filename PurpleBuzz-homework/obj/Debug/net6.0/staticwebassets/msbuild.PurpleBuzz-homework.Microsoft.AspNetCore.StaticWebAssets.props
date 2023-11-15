@@ -1616,6 +1616,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\22b88f6c-3d6f-4a6a-b65c-682e1d872388_product-image-1139520651.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\335a6bf4-1652-40bf-80d8-9346ba0950bf_logo.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>PurpleBuzz-homework</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/PurpleBuzz-homework</BasePath>
+      <RelativePath>assets/img/335a6bf4-1652-40bf-80d8-9346ba0950bf_logo.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\335a6bf4-1652-40bf-80d8-9346ba0950bf_logo.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\43548089-ecc6-4f52-90cc-a0c14c947253_product-image-1139520651.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>PurpleBuzz-homework</SourceId>

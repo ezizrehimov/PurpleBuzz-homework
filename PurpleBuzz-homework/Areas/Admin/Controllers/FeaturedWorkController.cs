@@ -156,5 +156,20 @@ namespace PurpleBuzz_homework.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+
+
+        [HttpGet]
+        public async Task<IActionResult> DeletePhoto(int id)
+        {
+            var photo = await appDbContext.FeaturedWorkPhotos.FindAsync(id);
+            if (photo == null) NotFound();
+
+            fileService.Delete(webHostEnvironment.WebRootPath, photo.Name);
+            appDbContext.FeaturedWorkPhotos.Remove(photo);
+
+            await appDbContext.SaveChangesAsync();
+
+            return Json(new { success = true, redirectTo = Url.Action(nameof(Update)) });
+        }
     }
 }

@@ -60,14 +60,11 @@
                                         <th scope="row">@item.Id</th>
                                         <td><img src="~/assets/img/@item.Name" /></td>
                                         <td>
-                                            <a class="btn btn-danger" asp-action="deletephoto" asp-controller="featuredwork" asp-area="admin" asp-route-id="@item.Id">Delete</a>
+                                            <button class="btn btn-danger" onclick="if(confirm('Eminsiniz?')){Sil(@item.Id);}">Delete</button>
                                         </td>
 
                                     </tr>
                                 }
-
-
-
 
                             </tbody>
                         </table>
@@ -80,6 +77,22 @@
         </div>
     </div>
 </div>
+
+<script>
+    function Sil(id) {
+        $.ajax({
+            url: '/admin/featuredwork/deletephoto/' + id,
+            type: 'GET',
+            success: function (data) {
+                if (data.success) {
+                    alert('Silme ugurlu oldu');
+                    window.location.href = data.redirectTo;
+                }
+            }
+        }
+        )
+    }
+</script>
 
 @section Scripts{
     @{
