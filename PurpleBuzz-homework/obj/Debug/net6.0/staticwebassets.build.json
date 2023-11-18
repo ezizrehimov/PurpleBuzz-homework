@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YAc4jTIKLDp7hKEtkJbIRnLkO1tZbgzeY1Jx1YcT+eM=",
+  "Hash": "pFOLr21Gwu1ikaieWF9xlLSwNaihyK2FiGuT/zWb87w=",
   "Source": "PurpleBuzz-homework",
   "BasePath": "_content/PurpleBuzz-homework",
   "Mode": "Default",
@@ -1732,23 +1732,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\22b88f6c-3d6f-4a6a-b65c-682e1d872388_product-image-1139520651.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\335a6bf4-1652-40bf-80d8-9346ba0950bf_logo.jpg",
-      "SourceId": "PurpleBuzz-homework",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\",
-      "BasePath": "_content/PurpleBuzz-homework",
-      "RelativePath": "assets/img/335a6bf4-1652-40bf-80d8-9346ba0950bf_logo.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\335a6bf4-1652-40bf-80d8-9346ba0950bf_logo.jpg"
     },
     {
       "Identity": "C:\\Users\\Ezizchik\\source\\repos\\PurpleBuzz-homework\\PurpleBuzz-homework\\wwwroot\\assets\\img\\43548089-ecc6-4f52-90cc-a0c14c947253_product-image-1139520651.jpg",
