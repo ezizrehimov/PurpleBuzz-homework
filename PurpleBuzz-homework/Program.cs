@@ -39,5 +39,15 @@ app.MapControllerRoute(
 app.UseAuthentication();
 app.UseAuthorization();
 
+var scopFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
+
+using (var scope = scopFactory.CreateScope())
+{
+    var userManager = scope.ServiceProvider.GetService<UserManager<User>>();
+    var roleManager = scope.ServiceProvider.GetService<RoleManager<IdentityRole>>();
+
+    await DbInitializer.SeedAsync(roleManager, userManager);
+}
+
 
 app.Run();
