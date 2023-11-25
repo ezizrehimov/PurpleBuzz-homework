@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PurpleBuzz_homework.DAL;
 using PurpleBuzz_homework.Helpers;
@@ -8,6 +9,8 @@ using PurpleBuzz_homework.ViewModels.TeamMember;
 namespace PurpleBuzz_homework.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+
 
     public class TeamMembersController : Controller
     {

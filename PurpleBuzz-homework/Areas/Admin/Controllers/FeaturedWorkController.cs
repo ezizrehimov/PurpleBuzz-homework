@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PurpleBuzz_homework.DAL;
@@ -9,6 +10,7 @@ using PurpleBuzz_homework.ViewModels.FeaturedWorkComp;
 namespace PurpleBuzz_homework.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class FeaturedWorkController : Controller
     {
         private readonly AppDbContext appDbContext;
