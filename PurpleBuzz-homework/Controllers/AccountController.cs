@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using PurpleBuzz_homework.Attributes;
+using PurpleBuzz_homework.Constants;
 using PurpleBuzz_homework.Models;
 using PurpleBuzz_homework.ViewModels.Accounts;
 
@@ -42,10 +44,13 @@ namespace PurpleBuzz_homework.Controllers
                 }
                 return View(model);
             }
+
+            await userManager.AddToRoleAsync(user, UserRoles.User.ToString());
+
             return RedirectToAction("login");
         }
 
-
+        [OnlyAnonymous]
         public async Task<IActionResult> Login()
         {
             return View();
